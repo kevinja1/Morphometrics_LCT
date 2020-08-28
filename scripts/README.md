@@ -19,7 +19,7 @@ Relevant packages:
 		export PATH="$PATH:/gdrive/public/TOOLS"
 
 Date Note:
-All information in the dataset has been dateshifted to protect patient privacy. The central event is the patient's operation, which occurs 12/31/2000. All images from 2000 onward are postoperative images, which images from 1999 and earlier are preoperative images. A word of caution, when looking at preoperative images (1999 or earlier) make sure the patient doesn't have electrodes implanted. Patients often recieve an MRI during the sEEG/ECoG localization period.
+All information in the dataset has been dateshifted to protect patient privacy. The central event is the patient's operation, which occurs 12/31/2000. All images from 2000 onward are postoperative images, which images from 1999 and earlier are preoperative images. A word of caution, when looking at preoperative images (1999 or earlier) make sure the patient doesn't have electrodes implanted. Patients often recieve an MRI during the sEEG/ECoG localization period. Electrodes are typically implanted 6 months before surgery so choose images that are from before then.
 
 OS Note:
 Depending on your system, you may need to use dos2unix on the scripts prior to running to eliminate incosistencies between OS interpretation. You may also need to change permissions to make the code executable via chmod. Something similar to the below commands should get the job done.
@@ -33,3 +33,15 @@ https://www.howtoforge.com/linux-nice-command/
 Thomas Campbell Arnold
 tcarnold@seas.upenn.edu
 8/11/2020 - created
+
+8/28/2020 Update
+
+Currently, scripts/LCT_example works if you configure your paths correctly. I have started working on scripts/LCT_multiple.sh to process multiple subjects at once. Currently, it throws an error as the dates for the scans for each patient is different. The script can be run by ./scripts/LCT_multiple.sh 
+
+The ultimate goal of the script is to use the LCT to build a model that predicts surgical outcome for epilepsy patients. Here are the future steps that need to be conducted:
+
+1) Finish generalized code to run for multiple subjects
+2) Extract annualized change in cortical thickness for brain regions in ./tools/atlases/AAL116_origin_MNI_T1.nii
+3) Use extracted features to predict surgical outcomes (good vs poor)
+
+The surgical outcomes for specific patients is listed in a spreadsheet in the folder called HUP_outcomes. I have also attached a presentation and summary for my work over summer 2020.
