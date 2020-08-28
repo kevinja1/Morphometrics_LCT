@@ -34,6 +34,8 @@ Thomas Campbell Arnold
 tcarnold@seas.upenn.edu
 8/11/2020 - created
 
+Kevin Mathew
+kevinja1@wharton.upenn.edu
 8/28/2020 Update
 
 Currently, scripts/LCT_example works if you configure your paths correctly. I have started working on scripts/LCT_multiple.sh to process multiple subjects at once. Currently, it throws an error as the dates for the scans for each patient is different. The script can be run by ./scripts/LCT_multiple.sh 
